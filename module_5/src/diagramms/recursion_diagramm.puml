@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Recursion --> Recursion : recursionMethod(n: int)
+Recursion --> Recursion : recursionMethod(n - 1)
+Recursion --> Recursion : recursionMethod(n - 2)
+Recursion --> long : return n
+Recursion --> long : return recursionMethod(n - 1) + recursionMethod(n - 2)
+
+@enduml
