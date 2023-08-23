@@ -1,0 +1,15 @@
+@startuml
+
+autonumber
+
+Dynamic -> User : (n <= 1) return n
+Dynamic -> Dynamic : value.containsKey(n) ?
+Dynamic --> User : return value.get(n)
+Dynamic -> Dynamic : fib = dynamicMethod(n - 1) + dynamicMethod(n - 2)
+Dynamic -> Dynamic : value.put(n, fib)
+Dynamic --> User : return fib
+
+
+
+deactivate Dynamic
+@enduml

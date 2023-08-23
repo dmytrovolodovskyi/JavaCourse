@@ -1,0 +1,16 @@
+@startuml
+
+autonumber
+
+Iterative -> Iterative : n <= 1 ?
+Iterative --> User : return n
+Iterative -> Iterative : fibPrev = 0
+Iterative -> Iterative : fibCurrent = 1
+Iterative -> Iterative : i = 2
+    loop for loop (i = 2; i <= n; i++)
+        Iterative -> Iterative : temp = fibCurrent
+        Iterative -> Iterative : fibCurrent = fibPrev + fibCurrent
+        Iterative -> Iterative : fibPrev = temp
+    end
+    Iterative --> User : return fibCurrent
+@enduml
