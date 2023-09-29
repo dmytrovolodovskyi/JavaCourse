@@ -63,3 +63,15 @@ i
 9module_4/src/main/java/com/example/app/CaseConverter.java,c/5/c5d69535a23b92a91a7857d74f82aaaece14bf0d
 ]
 -module_5/src/fibonacci_methods/Iterative.java,b/6/b60f5fa58684045692ee9cf5eb63d81a47ddbc52
+C
+module_8/.gitignore,9/c/9c2a5856c401c1b1726e6b726c69703ef94724e0
+@
+module_8/pom.xml,4/1/41d19c3a68d61acf06e9f3ce9d3709927e0573dc
+T
+$module_8/src/main/java/jdbc/App.java,0/7/0796ac2fda95d884f415235fc42a23fd337277b2
+_
+/module_8/src/main/java/flyway/DBConnection.java,5/4/54291acd1f60ba8837666d1bd27b16baf9c077e5
+]
+-module_8/src/main/java/jdbc/DBConnection.java,9/3/93ed22e13d8e2fabbea1262787b0544d14ce2f64
+\
+,module_8/src/main/java/flyway/FlywayApp.java,f/6/f64b4fbe964062e75007e8f9d2fefc3cf7eace7b
