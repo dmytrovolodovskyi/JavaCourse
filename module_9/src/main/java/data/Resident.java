@@ -17,6 +17,10 @@ public class Resident {
     @JoinColumn(name = "flat_id")
     private Flat flat;
 
+    public long getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }

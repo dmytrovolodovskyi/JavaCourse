@@ -20,6 +20,14 @@ public class Flat {
         return building;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public int getAddress() {
+        return floor;
+    }
+
     public int getFloor() {
         return floor;
     }
@@ -28,4 +36,7 @@ public class Flat {
         return number;
     }
 
+    public float getArea() {
+        return area;
+    }
 }
