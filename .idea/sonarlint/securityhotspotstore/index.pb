@@ -75,3 +75,29 @@ _
 -module_8/src/main/java/jdbc/DBConnection.java,9/3/93ed22e13d8e2fabbea1262787b0544d14ce2f64
 \
 ,module_8/src/main/java/flyway/FlywayApp.java,f/6/f64b4fbe964062e75007e8f9d2fefc3cf7eace7b
+C
+module_9/.gitignore,e/7/e73ddd0f4554f2c94b2986a07f826d78d8aa75b9
+S
+#.idea/sonarlint/issuestore/index.pb,9/f/9fe84ebb15faf917b7def6236dba604453cc61e0
+@
+module_9/pom.xml,4/b/4b70bb68f20688787e491174355e349ef7034034
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8/8/88a9255124c95bdc913197c120a8d560edc59c8e
+O
+module_9/src/main/java/App.java,4/f/4f3295e786bc2931cfa6a5267e3f87ed40c8ef16
+U
+%module_9/src/main/java/data/Flat.java,8/a/8a07aaac83bc671f8cd7b19dda530a5288c7550b
+Y
+)module_9/src/main/java/data/Resident.java,d/a/dac13e35c8e8b7761295474939ddbd8ec62809f1
+Y
+)module_9/src/main/java/data/Building.java,1/c/1c7e3d7bcf0769901e7ef03a81ff72a8d3954ff4
+b
+2module_10/gradle/wrapper/gradle-wrapper.properties,6/e/6e2f44e4c489ba5daa988528caf9442951b2c77b
+I
+module_10/settings.gradle,f/a/faae0bca4d86f47020102418739492088c293a32
+S
+#module_10/src/main/java/Entity.java,e/5/e5c6dafab718978c2a0da74f99cd2238c67732d1
+F
+module_10/build.gradle,c/b/cb4630e8bdb24b2c8efc14fbd6beb3129d30996e
+P
+ module_10/src/main/java/App.java,9/d/9de16a20a5aff3cd12fee8b5fe01d7e2498468b2
