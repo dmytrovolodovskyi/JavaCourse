@@ -7,9 +7,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class HttpStatusImageDownloader {
-    HttpStatusChecker httpStatusChecker = new HttpStatusChecker();
+    private final HttpStatusChecker httpStatusChecker = new HttpStatusChecker();
+    private static final String filePath = "module_10/src/main/resources/photo.jpg";
 
-    public void downloadStatusImage(int statusCode, String filePath) {
+    public void downloadStatusImage(int statusCode) throws IOException {
         String imageURL = httpStatusChecker.getStatusImage(statusCode);
 
         Connection connection = Jsoup.connect(imageURL).ignoreContentType(true);
