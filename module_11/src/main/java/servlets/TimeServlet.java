@@ -1,5 +1,8 @@
 package servlets;
 
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -17,6 +20,17 @@ import java.util.regex.Pattern;
 @WebServlet("/time")
 public class TimeServlet extends HttpServlet {
     private static final Logger logger = Logger.getLogger(TimeServlet.class.getName());
+
+    private TemplateEngine templateEngine;
+
+    @Override
+    public void init() {
+        ServletContextTemplateResolver templateResolver = new ServletContextTemplateResolver(getServletContext());
+        templateResolver.setPrefix("/WEB-INF/templates/");
+        templateResolver.setSuffix(".html");
+        templateEngine = new TemplateEngine();
+        templateEngine.setTemplateResolver(templateResolver);
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
