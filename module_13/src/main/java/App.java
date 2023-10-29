@@ -1,40 +1,39 @@
 import crud.ClientCrudService;
 import crud.PlanetCrudService;
+import crud.TicketCrudService;
 import entities.Client;
 import entities.Planet;
-import utils.FlywayMigration;
+import entities.Ticket;
 
 
 public class App {
     public static void main(String[] args) {
-
-        FlywayMigration.migrateDb();
-
         ClientCrudService clientCrudService = new ClientCrudService();
         PlanetCrudService planetCrudService = new PlanetCrudService();
+        TicketCrudService ticketCrudService = new TicketCrudService();
 
         Client newClient = new Client();
-        newClient.setName("New Client");
-        clientCrudService.persist(newClient);
+        newClient.setId(1L);
+        newClient.setName("Client");
+        clientCrudService.merge(newClient);
 
-        Client firstClient = clientCrudService.getById(1L);
-        firstClient.setName("Updated Client");
-        clientCrudService.merge(firstClient);
+        Planet toPlanet = new Planet();
+        toPlanet.setId("SAT");
+        toPlanet.setName("Saturn");
+        planetCrudService.merge(toPlanet);
 
-        clientCrudService.remove(newClient);
+        Planet fromPlanet = new Planet();
+        fromPlanet.setId("EA");
+        fromPlanet.setName("Earth");
+        planetCrudService.merge(fromPlanet);
 
-
-        Planet newPlanet = new Planet();
-        newPlanet.setId("MER");
-        newPlanet.setName("Mercury");
-        planetCrudService.persist(newPlanet);
-
-        Planet mercury = planetCrudService.getById("MER");
-        mercury.setId("NEP");
-        mercury.setName("Neptune");
-        planetCrudService.merge(mercury);
-
-        planetCrudService.remove(newPlanet);
+        Ticket newTicket = new Ticket();
+        newTicket.setId(1L);
+        newTicket.setCreatedAt("21:00");
+        newTicket.setClientId(newClient);
+        newTicket.setToPlanetId(toPlanet);
+        newTicket.setFromPlanetId(fromPlanet);
+        ticketCrudService.merge(newTicket);
 
     }
 }

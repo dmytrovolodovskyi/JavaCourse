@@ -4,9 +4,11 @@ import lombok.Data;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
+@Data
 @Entity
 @Table(name = "planet")
-@Data
 public class Planet {
     @Id
     @Column(name = "id")
@@ -14,4 +16,11 @@ public class Planet {
 
     @Column(name = "planet_name", length = 500)
     private String name;
+
+    @OneToMany(mappedBy = "toPlanetId", fetch = FetchType.EAGER)
+    private List<Ticket> toPlanetsTickets;
+
+    @OneToMany(mappedBy = "fromPlanetId", fetch = FetchType.EAGER)
+    private List<Ticket> fromPlanetsTickets;
+
 }
